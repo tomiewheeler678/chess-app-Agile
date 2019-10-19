@@ -65,10 +65,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-group :development, :test do
-  gem 'factory_bot_rails'
-end
-
 gem 'devise'
 
 gem 'jquery-rails'
@@ -80,3 +76,4 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
+gem 'simple_form'
