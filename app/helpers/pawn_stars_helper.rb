@@ -1,0 +1,2 @@
+module PawnStarsHelper
+end
