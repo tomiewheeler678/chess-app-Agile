@@ -7,12 +7,12 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.create(game_params)
-    redirect_to game_path(@game)
+    redirect_to new_game_path(@game)
   end
 
   def show
     unless game.present?
-      return redirect_to index_path
+      return redirect_to root_path
     end
   end
 
