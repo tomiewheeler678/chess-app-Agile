@@ -19,7 +19,18 @@ class GamesController < ApplicationController
   def update
   end
 
-  def join
+  def player_join_as_black
+    @game = Game.find(params[:id])
+    return render_not_found if @game.nil?
+    @game.update_attribute(:black_player_id, current_user.id)
+    redirect_to game_path(@game.id)
+  end
+
+  def player_join_as_white
+    @game = Game.find(params[:id])
+    return render_not_found if @game.nil?
+    @game.update_attribute(:white_player_id, current_user.id)
+    redirect_to game_path(@game.id)
   end
 
   def relinquish
