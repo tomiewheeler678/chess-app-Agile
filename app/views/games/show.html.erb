@@ -1,13 +1,16 @@
 <div class="chess-board">
-  
-      <% (1..8).each do |y_pos| %>
-        <div id = <%= y_pos %>>
-          <% (1..8).each do |x_pos| %>
-            <div data-x-pos = "<%= x_pos %>" 
-                  data-y-pos = "<%= y_pos %>" 
-                  class = "<%= square_class(y_pos, x_pos) %>">
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+    <table>
+      <tbody>
+        <% (1..8).each do |y_pos| %>
+          <tr id = <%= y_pos %>>
+            <% (1..8).each do |x_pos| %>
+              <td data-x-pos = "<%= x_pos %>" 
+                    data-y-pos = "<%= y_pos %>" 
+                    class = "<%= square_class(y_pos, x_pos) %>">
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 </div>

@@ -24,3 +24,24 @@
 .black-square {
   background: black;
 }
+
+.white-square {
+  background: white;
+}
+
+body {
+    background: gray;
+    padding: 20px;
+}
+table {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-collapse: collapse;
+    background: black;
+    padding-top: 50px;
+}
+td {
+   width: 75px; height: 75px;
+}
