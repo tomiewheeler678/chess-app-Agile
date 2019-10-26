@@ -1,98 +1,13 @@
-<div class="wrapper">
-  <div class="top">
-    <div class="wrapper-inner">
-      <div class="box-inner">A</div>
-      <div class="box-inner">B</div>
-      <div class="box-inner">C</div>
-      <div class="box-inner">D</div>
-      <div class="box-inner">E</div>
-      <div class="box-inner">F</div>
-      <div class="box-inner">G</div>
-      <div class="box-inner">H</div>
-    </div>
-  </div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="bottom">
-    <div class="wrapper-inner">
-      <div class="box-inner">A</div>
-      <div class="box-inner">B</div>
-      <div class="box-inner">C</div>
-      <div class="box-inner">D</div>
-      <div class="box-inner">E</div>
-      <div class="box-inner">F</div>
-      <div class="box-inner">G</div>
-      <div class="box-inner">H</div>
-    </div>
-  </div>
-
+<div class="chess-board">
+  
+      <% (1..8).each do |y_pos| %>
+        <div id = <%= y_pos %>>
+          <% (1..8).each do |x_pos| %>
+            <div data-x-pos = "<%= x_pos %>" 
+                  data-y-pos = "<%= y_pos %>" 
+                  class = "<%= square_class(y_pos, x_pos) %>">
+            </div>
+          <% end %>
+        </div>
+      <% end %>
 </div>
