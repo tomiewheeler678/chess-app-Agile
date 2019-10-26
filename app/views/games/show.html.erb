@@ -1,3 +1,14 @@
+<audio src="<%= audio_path 'my_audio_file.wav'%>" type="audio/mpeg" autostart="true" loop="true"  controls>
+    Your browser does not support the audio element.
+</audio>
+
+<script> 
+var audio = document.getElementById("audio"); 
+   function playAud() { 
+        audio.play(); 
+    } 
+</script>
+
 <div class="wrapper">
   <div class="top">
     <div class="wrapper-inner">
@@ -96,3 +107,4 @@
   </div>
 
 </div>
+
