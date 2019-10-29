@@ -1,3 +1,20 @@
+<div class="chess-board">
+    <table>
+      <tbody>
+        <% (1..8).each do |y_pos| %>
+          <tr id = <%= y_pos %>>
+            <% (1..8).each do |x_pos| %>
+              <td data-x-pos = "<%= x_pos %>" 
+                    data-y-pos = "<%= y_pos %>" 
+                    class = "<%= square_class(y_pos, x_pos) %>">
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+
 <audio src="<%= audio_path 'my_audio_file.wav'%>" type="audio/mpeg" autostart="true" loop="true" controls>
     Your browser does not support the audio element.
 </audio>
@@ -8,103 +25,3 @@ var audio = document.getElementById("audio");
         audio.play(); 
     } 
 </script>
-
-<div class="wrapper">
-  <div class="top">
-    <div class="wrapper-inner">
-      <div class="box-inner">A</div>
-      <div class="box-inner">B</div>
-      <div class="box-inner">C</div>
-      <div class="box-inner">D</div>
-      <div class="box-inner">E</div>
-      <div class="box-inner">F</div>
-      <div class="box-inner">G</div>
-      <div class="box-inner">H</div>
-    </div>
-  </div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="bottom">
-    <div class="wrapper-inner">
-      <div class="box-inner">A</div>
-      <div class="box-inner">B</div>
-      <div class="box-inner">C</div>
-      <div class="box-inner">D</div>
-      <div class="box-inner">E</div>
-      <div class="box-inner">F</div>
-      <div class="box-inner">G</div>
-      <div class="box-inner">H</div>
-    </div>
-  </div>
-
-</div>
-

@@ -2,20 +2,21 @@
 <div class="booyah-box col-12">
  <h1 class="text-center" id="start">Start A New Game</h1>
 <br />
- <div class="row">
-   <div class="container">
-     <h3 class="text-center" id="choose">Choose your fate:</h3>
-       <div class="image">
-         <%= simple_form_for(@game, url: games_path) do |f| %>
-           <%= f.input :white_player_id, as: :hidden, :input_html => { :value => current_user.id } %>
-           <%= f.submit "White Player", :type => :image, :src => image_path("whiteking.png"), height: '350', width: '350', class: 'btn btn-primary' %>
-         <% end %>
-         <%= simple_form_for(@game, url: games_path) do |f| %>
-           <%= f.input :black_player_id, as: :hidden, :input_html => { :value => current_user.id } %>
-           <%= f.submit "Black Player", :type => :image, :src => image_path("blackking.png"), height: '350', width: '350', class: 'btn btn-primary' %>
-         <% end %>
-       </div>
-     </div>
-   </div>
- <br />
+  <div class="row">
+    <div class="container">
+      <h3 class="text-center" id="choose">Choose your fate:</h3>
+        <div class="image">
+          <%= simple_form_for(@game, url: games_path) do |f| %>
+            <%= f.input :white_player_id, as: :hidden, :input_html => { :value => current_user.id } %>
+            <%= f.submit "White Player", :type => :image, :src => image_path("whiteking.png"), height: '350', width: '350', class: 'btn btn-primary' %>
+          <% end %>
+          <%= simple_form_for(@game, url: games_path) do |f| %>
+            <%= f.input :black_player_id, as: :hidden, :input_html => { :value => current_user.id } %>
+            <%= f.submit "Black Player", :type => :image, :src => image_path("blackking.png"), height: '350', width: '350', class: 'btn btn-primary' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <br />
 </div>
+
