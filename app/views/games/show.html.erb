@@ -8,7 +8,9 @@
               <td data-x-pos = "<%= x_pos %>" 
                     data-y-pos = "<%= y_pos %>" 
                     class = "<%= square_class(y_pos, x_pos) %>">
-                 
+                  <% if gamepiece = @pieces.where("(x_pos = ? AND y_pos = ?)", x_pos, y_pos).first %>
+                    <span><%= image_tag gamepiece.image, class: "#{gamepiece.name} selectable-piece", id: gamepiece.id %></span>
+                  <% end %>
               </td>
             <% end %>
           </tr>

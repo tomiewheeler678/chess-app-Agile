@@ -11,6 +11,8 @@ class GamesController < ApplicationController
   end
 
   def show
+    @game = Game.find_by_id(params[:id])
+    @pieces = @game.pieces
     unless game.present?
       return redirect_to root_path
     end
@@ -35,6 +37,6 @@ class GamesController < ApplicationController
   end
 
   def game_params
-    params.require(:game).permit(:black_player_id, :white_player_id, :game_id)
+    params.require(:game).permit(:black_player_id, :white_player_id, :game_id, :name)
   end
 end

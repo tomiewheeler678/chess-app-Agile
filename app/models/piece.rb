@@ -1,21 +1,25 @@
 class Piece < ApplicationRecord
   belongs_to :game
-  belongs_to :user
+  belongs_to :user, required: false
 
   def color
-    white ? 'white' : 'black'
+    white? ? 'white' : 'black'
   end
 
-  def white
-    color
+  def white?
+    white
   end
 
   def black
-    !color
+    !white
+  end
+
+  def image
+    image ||= "#{name}.png"
   end
 
   def name
-    "#{self.type}_#{self.color ? 'white' : 'black'}"
+    "#{self.type}_#{self.white ? 'white' : 'black'}"
   end
   
 end
