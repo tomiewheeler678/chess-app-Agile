@@ -1,0 +1,48 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#start {
+  color: #045B6C;
+  font-family: 'Fredericka the Great', cursive; 
+  font-size: 40px;
+}
+
+#choose {
+  color: #045B6C;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 30px;
+}
+
+.black-square {
+  background: gray;
+}
+
+.white-square {
+  background: white;
+}
+
+body {
+    background: gray;
+    padding: 20px;
+}
+table {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-collapse: collapse;
+    background: black;
+    padding-top: 50px;
+}
+td {
+   width: 75px; height: 75px;
+}
+

@@ -10,10 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_12_154642) do
+ActiveRecord::Schema.define(version: 2019_10_30_160600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "games", force: :cascade do |t|
+    t.string "name"
+    t.integer "white_player_id"
+    t.integer "black_player_id"
+    t.integer "winning_player_id"
+    t.integer "turn"
+    t.boolean "open", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "invitations", force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "player_id"
+    t.string "guest_player_email"
+    t.integer "invitation_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "move_histories", force: :cascade do |t|
+    t.integer "piece_id"
+    t.integer "player_id"
+    t.integer "x_position"
+    t.integer "y_position"
+    t.integer "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pieces", force: :cascade do |t|
+    t.string "type"
+    t.string "symbol"
+    t.boolean "color", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "x_pos"
+    t.integer "y_pos"
+    t.string "name"
+    t.integer "game_id"
+    t.integer "user_id"
+    t.boolean "white"
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.integer "piece_id"
+    t.integer "player_id"
+    t.integer "x_position"
+    t.integer "y_position"
+    t.integer "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
