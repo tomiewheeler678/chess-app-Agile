@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :conversations do
-    resources :messages
+  resources :conversations, only: [:show, :new] do
+    resources :messages, only: :create
   end
 
 end
