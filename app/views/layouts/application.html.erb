@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
+
     <title>Chessapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -34,6 +43,9 @@
           </li>
           <li class="nav-item">
             <%= link_to 'Games', new_game_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Chat', conversations_path, class: 'nav-link' %>
           </li>
         </ul>
             <ul class="navbar-nav">
