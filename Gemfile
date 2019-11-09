@@ -77,6 +77,3 @@ source 'https://rails-assets.org' do
 end
 
 gem 'simple_form'
-
-gem 'private_pub'
-gem 'thin'
