@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
+
     <title>Chessapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -27,7 +36,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <%= link_to 'Home', root_path, class: 'nav-link' %> 
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">How To Play</a>
@@ -35,8 +44,11 @@
           <li class="nav-item">
             <%= link_to 'Games', new_game_path, class: 'nav-link' %>
           </li>
+          <li class="nav-item">
+            <%= link_to 'Chat', users_path, class: 'nav-link' %>
+          </li>
         </ul>
-            <ul class="navbar-nav">
+        <ul class="navbar-nav">
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to 'My Profile', user_path(current_user), class: 'nav-link' %>
