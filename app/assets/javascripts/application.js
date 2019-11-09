@@ -19,5 +19,3 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require_tree .
-//= require chat
-//= require private_pub
