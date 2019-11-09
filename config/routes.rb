@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'pawn_stars#index'
-  resources :users, only: :show
+  resources :users, only: [:show, :index]
   resources :games, only: [:new, :create, :show]
 
   authenticated :user do
