@@ -77,3 +77,10 @@ source 'https://rails-assets.org' do
 end
 
 gem 'simple_form'
+
+gem 'draper'
+
+gem 'active_model_serializers', '~> 0.10.0'
+
+gem 'webpacker'
+gem 'react-rails'
