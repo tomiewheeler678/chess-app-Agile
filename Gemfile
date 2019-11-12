@@ -78,9 +78,17 @@ end
 
 gem 'simple_form'
 
-gem 'draper'
+gem 'draper', '~> 3.0.0.pre1'
 
-gem 'active_model_serializers', '~> 0.10.0'
+gem 'active_model_serializers', '~> 0.10.5'
 
 gem 'webpacker'
-gem 'react-rails'
+gem 'react-rails', '~> 1.11'
+
+
+gem 'virtus', '~> 1.0', '>= 1.0.5'
+gem 'faker', '~> 1.7', '>= 1.7.3'
+
+gem 'pry'
+
+gem 'pry-rails', :group => :development

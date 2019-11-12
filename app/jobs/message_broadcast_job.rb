@@ -1,4 +1,4 @@
-class MessageBroadcastJobJob < ApplicationJob
+class MessageBroadcastJob < ApplicationJob
   queue_as :messages
 
   def perform(message_id)

@@ -10,5 +10,5 @@ class User < ApplicationRecord
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
 
-  validates :first_name, :last_name, presence: true
+  
 end
