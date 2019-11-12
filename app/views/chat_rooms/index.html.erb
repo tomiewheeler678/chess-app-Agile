@@ -1,0 +1,35 @@
+<h2 class="text-center">
+  Chat rooms
+  <br/>
+  <small>
+    <%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary btn-sx' %>
+  </small>
+</h2>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Owner</th>
+      <th>Created At</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @chat_rooms.each do |chat_room| %>
+      <tr>
+        <td>
+          <%= chat_room.title %>
+        </td>
+        <td>
+          <%= chat_room.owner %>
+        </td>
+        <td>
+          <%= chat_room.created_at %>
+        </td>
+        <td>
+          <%= link_to "Enter", chat_room_path(chat_room), class: "btn btn-sm btn-primary" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

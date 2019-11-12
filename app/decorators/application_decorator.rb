@@ -1,4 +1,4 @@
-class ApplicationDecorator < Draper::Decorator
+class ApplicationDecorator < ApplicationDecorator
   # Define methods for all decorated objects.
   # Helpers are accessed through `helpers` (aka `h`). For example:
   #

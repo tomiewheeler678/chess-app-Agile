@@ -1,4 +1,4 @@
-class ChatRoomDecoratorDecorator < Draper::Decorator
+class ChatRoomDecorator < Draper::Decorator
   delegate_all
 
   def owner
